@@ -34,7 +34,6 @@ public class HomeController {
 	{
 		String username = SecurityContextHolder.getContext().getAuthentication().getName();
 		String ur = userService.getUserRoleType(username);
-		System.out.print("Hello");
 		if(ur.equals("ROLE_ADMIN")||ur.equals("ROLE_EMPLOYEE"))
 		   return "internalHome";
 		else 
